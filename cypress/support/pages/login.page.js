@@ -6,7 +6,7 @@ class LoginPage {
     get #login() {return cy.get("#wp-submit")}
 
     login (user, pass){
-        this.#user.type(user)
+        this.#user.type(user, {force: true})
         this.#pass.type(pass)
         this.#login.click()
         
